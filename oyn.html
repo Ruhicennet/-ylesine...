@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Basit Sayı Oyunu</title>
+    <meta charset="UTF-8">
+    <title>Oyun Sayfası</title>
 </head>
-<body style="text-align: center; padding-top: 50px;">
+<body>
 
-    <h1>Sayı Tahmin Oyunu</h1>
-    <p>1 ile 10 arasında bir sayı tuttum. Tahmin et!</p>
-    <input type="number" id="tahminKutusu" placeholder="Sayı yaz...">
+    <h1>Oyun Başladı!</h1>
+    <p>1 ile 10 arasında bir sayı tahmin et:</p>
 
-    <button onclick="kontrolEt()">Tahmin Et</button>
+    <input type="number" id="tahmin">
+    <button onclick="oyna()">Tahmin Et</button>
 
-    <p id="mesaj" style="font-weight: bold; color: blue;"></p>
+    <p id="sonuc"></p>
+
+    <br><br>
+    <a href="index.html">Çıkış Yap (Anasayfaya Dön)</a>
 
     <script>
-        var tutulanSayi = Math.floor(Math.random() * 10) + 1;
+        var gizliSayi = 7; // Sabit basit bir sayı tuttuk
 
-        function kontrolEt() {
-      
-            var tahmin = document.getElementById("tahminKutusu").value;
-            var mesajAlani = document.getElementById("mesaj");
+        function oyna() {
+            var tahmin = document.getElementById("tahmin").value;
+            var sonucYazisi = document.getElementById("sonuc");
 
-            if (tahmin == tutulanSayi) {
-                mesajAlani.innerText = "Tebrikler Doğru bildin. ";
-                mesajAlani.style.color = "green";
-            } else if (tahmin > tutulanSayi) {
-                mesajAlani.innerText = "Daha KÜÇÜK bir sayı dene.";
+            if (tahmin == gizliSayi) {
+                sonucYazisi.innerText = "Tebrikler! Bildin.";
             } else {
-                mesajAlani.innerText = "Daha BÜYÜK bir sayı dene.";
+                sonucYazisi.innerText = "Yanlış tahmin, tekrar dene.";
             }
         }
     </script>

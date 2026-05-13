@@ -2,48 +2,33 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş Ekranı</title>
-    <style>
-
-        .kayit-kapsayici {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            width: 300px;
-        }
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }   
-        
-    </style>
+    <title>Kayıt Sayfası</title>
 </head>
 <body>
+
+    <h1>Hoşgeldiniz</h1>
+
+    <p>İsim:</p>
+    <input type="text">
+
+    <p>Nick (Takma Ad):</p>
+    <input type="text">
+
+    <p>E-Posta:</p>
+    <input type="email">
+
+    <p>Şifre:</p>
+    <input type="password">
+
+    <br><br>
+
     <a href="oyn.html">
-        <button style="padding: 10px 20px; cursor: pointer;">Oyuna Git</button>
+        <button>Oyuna Git</button>
     </a>
 
-    <div class="kayit-kapsayici">
-        <h2>KAYIT</h2>
-        
-        <form id="kayitFormu">
-            <input type="text" placeholder="İsim" required>
-            <input type="password" placeholder="Şifre" required>
-            <button type="submit">Oyuna Git</button>
-        </form>
-    </div>
-
-    <script>
-        
-        document.getElementById('kayitFormu').addEventListener('submit', function(e) {
-            e.preventDefault(); 
-            alert("Kayıt başarılı! Oyuna yönlendiriliyorsunuz...");
-        });
-        
-    </script>
+    <a href="giriş.html">
+        <button>Giriş Yap</button>
+    </a>
 
 </body>
 </html>
