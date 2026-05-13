@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basit Sayı Oyunu</title>
+</head>
+<body style="text-align: center; padding-top: 50px;">
+
+    <h1>Sayı Tahmin Oyunu</h1>
+    <p>1 ile 10 arasında bir sayı tuttum. Tahmin et!</p>
+    <input type="number" id="tahminKutusu" placeholder="Sayı yaz...">
+
+    <button onclick="kontrolEt()">Tahmin Et</button>
+
+    <p id="mesaj" style="font-weight: bold; color: blue;"></p>
+
+    <script>
+        var tutulanSayi = Math.floor(Math.random() * 10) + 1;
+
+        function kontrolEt() {
+      
+            var tahmin = document.getElementById("tahminKutusu").value;
+            var mesajAlani = document.getElementById("mesaj");
+
+            if (tahmin == tutulanSayi) {
+                mesajAlani.innerText = "Tebrikler Doğru bildin. ";
+                mesajAlani.style.color = "green";
+            } else if (tahmin > tutulanSayi) {
+                mesajAlani.innerText = "Daha KÜÇÜK bir sayı dene.";
+            } else {
+                mesajAlani.innerText = "Daha BÜYÜK bir sayı dene.";
+            }
+        }
+    </script>
+
+</body>
+</html>

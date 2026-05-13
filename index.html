@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=p, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Ekranı</title>
+    <style>
+
+        .kayit-kapsayici {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }   
+        
+    </style>
 </head>
 <body>
-    <h1>Enes İlhan....</h1>
+    <a href="oyn.html">
+        <button style="padding: 10px 20px; cursor: pointer;">Oyuna Git</button>
+    </a>
+
+    <div class="kayit-kapsayici">
+        <h2>KAYIT</h2>
+        
+        <form id="kayitFormu">
+            <input type="text" placeholder="İsim" required>
+            <input type="password" placeholder="Şifre" required>
+            <button type="submit">Oyuna Git</button>
+        </form>
+    </div>
+
+    <script>
+        
+        document.getElementById('kayitFormu').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            alert("Kayıt başarılı! Oyuna yönlendiriliyorsunuz...");
+        });
+        
+    </script>
+
 </body>
 </html>
